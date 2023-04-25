@@ -1,8 +1,8 @@
 pipeline {
     environment {
-        registry = "moetazkallali/exam"
+        registry = "khedijasidhom/devops"
         registryCredential = 'dockerhub_id'
-        dockerImage = 'exam'
+        dockerImage = 'devops'
     }
     agent any
     stages {
@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo "Getting Project from Git";
                 sh "rm -rf Exam"
-                sh "git clone https://github.com/moetazkallali/Exam.git"
+                sh "git clone https://github.com/khedijasidhom/devops.git"
                   }
             }
             
@@ -42,7 +42,7 @@ pipeline {
             steps{
                 sh 'mvn sonar:sonar \
   -Dsonar.projectKey=JenkinsExamProject \
-  -Dsonar.host.url=http://192.168.1.120:9000 \
+  -Dsonar.host.url=http://192.168.1.196:9000 \
   -Dsonar.login=47e5a816defea731387d72ad9707363b75676b29'
                  }
         }    
