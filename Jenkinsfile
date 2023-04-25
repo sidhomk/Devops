@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo "Getting Project from Git";
                 sh "rm -rf Exam"
-                sh "git clone https://github.com/khedijasidhom/devops.git"
+                sh "git clone https://github.com/sidhomk/Devops.git"
                   }
             }
             
