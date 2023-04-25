@@ -9,7 +9,7 @@ pipeline {
         stage('Git') {
             steps {
                 echo "Getting Project from Git";
-                sh "rm -rf Exam"
+                sh "rm -rf Devops"
                 sh "git clone https://github.com/sidhomk/Devops.git"
                   }
             }
